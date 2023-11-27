@@ -29,7 +29,7 @@ This project is a keylogger developed for educational purposes. The primary goal
     ```
 
 4. **View Logs:**
-    - The logged data will be stored in [specify file name and location].
+    - The logged data will be stored in folder called KeyLogger_Info.
 
 ## Usage Guidelines
 
