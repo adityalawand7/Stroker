@@ -1,45 +1,106 @@
 # Stroker
 
-## Overview
+# Keylogger Python Project
 
-This project is a keylogger developed for educational purposes. The primary goal of this project is to demonstrate an understanding of keyboard input capturing for educational and awareness purposes. It is crucial to use this tool responsibly and ethically.
+This Python project serves as a keylogger, capturing keystrokes, system information, clipboard content, screenshots, and audio recordings.
 
-**Note: This tool should only be used in environments where you have explicit permission to monitor and log keyboard input. Unauthorized use is strictly prohibited.**
+## Table of Contents
 
-## Features
+- [Libraries Used](#libraries-used)
+- [Default Variables](#default-variables)
+- [Usage](#usage)
+- [Data Collection](#data-collection)
+- [Encryption and Decryption](#encryption-and-decryption)
+- [Additional Notes](#additional-notes)
+- [Contributing](#contributing)
+- [License](#license)
 
-- **Keylogging:** Captures keyboard input and logs it to a file.
-- **Logging Format:** Input is logged in .txt file.
+## Libraries Used
 
-## Getting Started
+- `email.mime` for composing email messages
+- `smtplib` for sending emails (optional)
+- `pynput` for keyboard listening
+- `sounddevice` for audio recording
+- `PIL` for screenshots
+- `cryptography` for data encryption
 
-1. **Clone the repository:**
+## Default Variables
+
+- **Log Files:**
+  - `key_log.txt`
+  - `system_info.txt`
+  - `clipboard.txt`
+  - `audio.wav`
+  - `screenshot.png`
+
+- **Encrypted Log Files:**
+  - `e_key_log.txt`
+  - `e_system_info.txt`
+  - `e_clipboard.txt`
+
+- **Paths:**
+  - `\KeyLogger_Info`
+  - '\Cryptography_KeyLogger'
+
+- **Email Configuration:**
+  - `email_address`: Sender's email
+  - `password`: Sender's email password
+  - `toaddr`: Recipient's email
+
+- **Recording Settings:**
+  - `microphone_time`: Audio recording duration
+  - `time_iteration`: Interval between data collection cycles
+  - `number_of_iterations_end`: Number of data collection cycles
+
+- **Encryption Key:**
+  - `B0-wVqAFlgSQ4Y_KE_vss6fpPAA8TWMbH-_cjjYEvOE=`
+
+## Usage
+
+1. Clone the repository.
+
     ```bash
     git clone https://github.com/yourusername/keylogger-project.git
     ```
 
-2. **Install Dependencies:**
+2. Install the required libraries.
+
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Run the Keylogger:**
-    ```bash
-    python keylogger.py
+3. Edit variables in `main.py` for customization (email, recording settings, etc.).
+
+4. Run the script.
+
+    ```
+    Advance Keylogger.ipynb file in Jupyter Notebook or convert to the IDE format you use and run.
     ```
 
-4. **View Logs:**
-    - The logged data will be stored in folder called KeyLogger_Info.
+## Data Collection
 
-## Usage Guidelines
+- Keystrokes: `key_log.txt`
+- System Information: `system_info.txt`
+- Clipboard Content: `clipboard.txt`
+- Screenshots: `screenshot.png`
+- Audio Recordings: `audio.wav`
 
-- Ensure that you have the necessary permissions to use this tool in the intended environment.
+## Encryption and Decryption
 
-## Disclaimer
+- Encrypted Files: `e_key_log.txt`, `e_system_info.txt`, `e_clipboard.txt`
+- Encryption Key: Stored in `encryption_key.txt`
 
-This project is intended for educational purposes only. The developer and contributors is not responsible for any misuse of this tool. Use it responsibly and in compliance with local laws and regulations.
+## Additional Notes
 
-## Contribution
+- This project is for educational purposes only. Use responsibly and ethically.
+- Email sending requires a valid SMTP server and credentials.
+- Adjust data collection settings according to your needs.
+- Securely store the encryption key for decryption.
 
-If you have ideas for improvements or new features, feel free to open an issue or submit a pull request. Contributions are welcome!
+## Contributing
 
+Contributions are welcome! Feel free to report bugs, suggest improvements, or add new features.
+
+## License
+
+This project is licensed under the MIT License.
